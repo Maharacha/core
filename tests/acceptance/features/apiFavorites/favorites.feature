@@ -87,7 +87,7 @@ Feature: favorite
       | new         |
 
   @smokeTest
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: Get favorited elements of a folder
     Given using <dav_version> DAV path
     When user "Alice" favorites element "/FOLDER" using the WebDAV API
@@ -103,7 +103,7 @@ Feature: favorite
       | old         |
       | new         |
 
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: Get favorited elements of a subfolder
     Given using <dav_version> DAV path
     And user "Alice" has created folder "/subfolder"
@@ -126,7 +126,7 @@ Feature: favorite
       | new         |
 
   @files_sharing-app-required
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: moving a favorite file out of a share keeps favorite state
     Given using <dav_version> DAV path
     And user "Brian" has been created with default attributes and without skeleton files
@@ -143,7 +143,7 @@ Feature: favorite
       | new         |
 
   @issue-33840
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: Get favorited elements and limit count of entries
     Given using <dav_version> DAV path
     And user "Alice" has favorited element "/textfile0.txt"
@@ -165,7 +165,7 @@ Feature: favorite
       | new         |
 
   @issue-33840
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: Get favorited elements paginated in subfolder
     Given using <dav_version> DAV path
     And user "Alice" has created folder "/subfolder"
