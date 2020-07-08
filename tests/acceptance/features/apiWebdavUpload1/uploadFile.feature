@@ -61,6 +61,19 @@ Feature: upload file
       | old         | "file ?2.txt"       |
       | new         | "file ?2.txt"       |
 
+  Scenario Outline: upload a file with comma in the filename and check download content
+    Given using <dav_version> DAV path
+    When user "Alice" uploads file with content "file with comma" to <file_name> using the WebDAV API
+    Then the content of file <file_name> for user "Alice" should be "file with comma"
+    Examples:
+      | dav_version | file_name      |
+      | old         | "sample,1.txt" |
+      | old         | ",,,.txt"      |
+      | old         | ",,,.,"        |
+      | new         | "sample,1.txt" |
+      | new         | ",,,.txt"      |
+      | new         | ",,,.,"        |
+
   Scenario Outline: upload a file into a folder and check download content
     Given using <dav_version> DAV path
     And user "Alice" has created folder "<folder_name>"

@@ -19,6 +19,7 @@ Feature: Search
     And user "Alice" has uploaded file with content "does-not-matter" to "/फनी näme/upload.txt"
     And user "Alice" has uploaded file with content "does-not-matter" to "/फनी näme/a-image.png"
     And user "Alice" has uploaded file with content "does-not-matter" to "/upload😀 😁/upload😀 😁.txt"
+    And user "Alice" has uploaded file with content "file with comma in filename" to "/upload😀 😁/upload,1.txt"
 
   @smokeTest
   Scenario Outline: search for entry by pattern
@@ -33,6 +34,7 @@ Feature: Search
       | /फनी näme/upload.txt          |
       | /upload😀 😁                  |
       | /upload😀 😁/upload😀 😁.txt  |
+      | /upload😀 😁/upload,1.txt     |
     But the search result of user "Alice" should not contain these entries:
       | /a-image.png |
     Examples:
