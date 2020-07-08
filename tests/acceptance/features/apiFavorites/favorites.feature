@@ -195,7 +195,7 @@ Feature: favorite
       | new         |
 
   @files_sharing-app-required
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-39
   Scenario Outline: sharer file favorite state should not change the favorite state of sharee
     Given using <dav_version> DAV path
     And user "Brian" has been created with default attributes and without skeleton files
@@ -210,7 +210,7 @@ Feature: favorite
       | new         |
 
   @files_sharing-app-required
-  @skipOnOcis @issue-ocis-reva-21
+  @skipOnOcis @issue-ocis-reva-243
   Scenario Outline: sharee file favorite state should not change the favorite state of sharer
     Given using <dav_version> DAV path
     And user "Brian" has been created with default attributes and without skeleton files
